@@ -1,5 +1,9 @@
 2008-03-09 Andrew De Ponte <cyphactor@gmail.com>
 
+* source:trunk/src/Makefile.am (): Forgot to include the stf_export.h file in the header files that get installed. Hence, I corrected it.
+
+2008-03-09 Andrew De Ponte <cyphactor@gmail.com>
+
 * source:trunk/ (): Restructured the project and commented the API using doxygen style commenting and provided a Doxyfile to produce appropriate doxygen comments in the doc/dox/ directory when doxygen is run from within the projects root directory.
 
 2008-03-09 Andrew De Ponte <cyphactor@gmail.com>
