@@ -29,4 +29,6 @@ rm -f ltmain.sh
 rm -f missing
 rm -f Makefile.in
 rm -f src/Makefile.in
+rm -f examples/Makefile.in
 rm -f src/*~
+rm -r compile

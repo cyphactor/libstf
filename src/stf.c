@@ -67,13 +67,13 @@ void stf_free_test_framework(stf_test_framework_t *p_framework) {
             while(p_cur_test != NULL) {
                 p_prev_test = p_cur_test;
                 p_cur_test = p_cur_test->p_next;
-                stf_free_unit_test(p_prev_test);
+                _stf_free_unit_test(p_prev_test);
             }
         }
     }
 }
 
-void stf_run_test_framework(stf_test_framework_t *p_framework, void *p_data) {
+void stf_run_test_framework(const stf_test_framework_t *p_framework, void *p_data) {
     stf_unit_test_t *p_cur_test;
     int success_count;
     success_count = 0;

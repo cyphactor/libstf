@@ -7,7 +7,7 @@ AM_CONFIG_HEADER([src/config.h])
 # checks for programs
 AC_LIBTOOL_WIN32_DLL
 AC_PROG_LIBTOOL
-AC_PROG_CC
+AM_PROG_CC_C_O
 
 # checks for libraries
 
@@ -63,5 +63,5 @@ AC_C_BIGENDIAN(
 
 # checks for system services
 
-AC_CONFIG_FILES([Makefile src/Makefile])
+AC_CONFIG_FILES([Makefile src/Makefile examples/Makefile])
 AC_OUTPUT
