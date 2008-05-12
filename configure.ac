@@ -4,6 +4,8 @@ AM_INIT_AUTOMAKE
 AC_CONFIG_SRCDIR([src/stf.c])
 AM_CONFIG_HEADER([src/config.h])
 
+LIBRARY_VERSION=1:0:0
+
 # checks for programs
 AC_LIBTOOL_WIN32_DLL
 AC_PROG_LIBTOOL
@@ -23,6 +25,8 @@ case $host in
 esac
 
 AC_SUBST([PMF_SYSTEM])
+AC_SUBST([LIBRARY_VERSION])
+AC_SUBST([LIBRARY_RELEASE])
 
 # checks for header files
 AC_HEADER_STDC

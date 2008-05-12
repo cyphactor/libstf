@@ -1,3 +1,17 @@
+2008-05-11 Andrew De Ponte <cyphactor@gmail.com>
+
+* source:trunk/src/Makefile.am (): Corrected it to use the LIBRARY_VERSION that is now defined in the configure.ac.
+
+* source:trunk/src/stf.c (): Modified the license comment at the top to be listed under the GPL as it is now being dual licensed. I also corrected a bug with the naming of the stf_free_unit_test() function where it wasn't being defined as _stf_free_unit_test().
+
+* source:trunk/configure.ac (): Added the LIBRARY_VERSION to the top and added it as a substitution for the Makefile.am files.
+
+* source:trunk/headers/stf/stf.h (): Updated the license comment as it is now being dual licensed under the GPL and a proprietary license.
+
+* source:trunk/headers/stf/stf.h (): Updated the license comment as it is now being dual licensed under the GPL and a proprietary license.
+
+* source:trunk/examples/example_test.c (): Updated the license comment as it is now being dual licensed under the GPL and a proprietary license.
+
 2008-03-09 Andrew De Ponte <cyphactor@gmail.com>
 
 * source:trunk/src/Makefile.am (): Forgot to include the stf_export.h file in the header files that get installed. Hence, I corrected it.

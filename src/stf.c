@@ -1,14 +1,22 @@
 /*
- * Copyright 2008 Blackbridge Software, LLC.
+ * Copyright 2008 Andrew De Ponte.
  *
  * This file is part of lib_stf.
  *
- * lib_stf is the intellectual property of Blackbridge Software, LLC; any
- * distribution and/or modifications and/or reproductions of any portion of
- * lib_stf MUST be approved in writing by Blackbridge Software, LLC.
- *
- * lib_stf is dirstributed WITHOUT ANY WARRANTY; without even the implied
- * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ * lib_stf is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or any
+ * later version.
+ * 
+ * lib_stf is distributed in the hopes that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with lib_stf; if not, write to the Free Software
+ * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307
+ * USA
  */
 
 #include <stdio.h>
@@ -51,7 +59,7 @@ int stf_add_unit_test(stf_test_framework_t *p_framework, void (*p_func)(void *p_
     return 0;
 }
 
-void stf_free_unit_test(stf_unit_test_t *p_test) {
+void _stf_free_unit_test(stf_unit_test_t *p_test) {
     if (p_test != NULL) {
         free(p_test);
     }
