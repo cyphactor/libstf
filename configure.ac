@@ -17,8 +17,18 @@ case $host in
   *mingw32*) PMF_SYSTEM='-Wl,--output-def,.libs/libpmf.def,-s' ;;
 
 	*darwin*)
-	  CFLAGS="$CFLAGS -isysroot /Developer/SDKs/MacOSX10.4u.sdk -arch i386 -arch ppc"
-    PMF_SYSTEM="-Wl,-syslibroot,/Developer/SDKs/MacOSX10.4u.sdk -arch i386 -arch ppc" ;;
+	    AC_ARG_ENABLE([universal-binary],
+	        [AS_HELP_STRING([--enable-universal-binary enable universal binary creation (default disabled)])],
+	        [enable_univ_bin=$enableval],
+	        [enable_univ_bin=no])
+	    
+	    [if [ "$enable_univ_bin" = "yes" ]
+	    then
+	        CFLAGS="$CFLAGS -mmacosx-version-min=10.4 -isysroot /Developer/SDKs/MacOSX10.4u.sdk -arch i386 -arch ppc"
+	        PMF_SYSTEM="-mmacosx-version-min=10.4 -Wl,-syslibroot,/Developer/SDKs/MacOSX10.4u.sdk -arch i386 -arch ppc"
+	    fi]	        
+
+	    ;;	
 
     # Handle linking to the proper libraries for all other machines.
     *) PMF_SYSTEM='' ;;
